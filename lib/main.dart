@@ -6,7 +6,10 @@
 
 import 'package:flutter/material.dart';
 
+import 'package:cards_navigation/app/app_router.dart';
 import 'card_page.dart';
+import 'first_page.dart';
+import 'second_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,8 +24,12 @@ class MyApp extends StatelessWidget {
       title: _title,
       home: Scaffold(
         appBar: AppBar(title: const Text(_title)),
-        body: MyStatelessWidget(),
       ),
+      initialRoute: AppRouter.firstPage,
+      routes: {
+        AppRouter.firstPage: (BuildContext context) => FirstPage(),
+        AppRouter.secondPage: (BuildContext context) => SecondPage(),
+      },
     );
   }
 }
