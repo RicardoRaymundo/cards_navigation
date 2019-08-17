@@ -16,7 +16,10 @@ class FirstPage extends StatelessWidget {
             heightFactor: 11,
             alignment: Alignment.bottomCenter,
             child: FloatingActionButton(
-                shape: ContinuousRectangleBorder(side: BorderSide(), borderRadius: BorderRadius.circular(10)),
+                shape: ContinuousRectangleBorder(
+                    side: BorderSide(),
+                    borderRadius: BorderRadius.circular(10)
+                ),
                 onPressed: () {
               CustomNavigator.push(context, SecondPage());
               // Navigator.pushNamed(context, AppRouter.secondPage);
