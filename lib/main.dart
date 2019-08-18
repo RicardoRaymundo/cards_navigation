@@ -10,6 +10,7 @@ import 'package:cards_navigation/app/app_router.dart';
 import 'card_page.dart';
 import 'first_page.dart';
 import 'second_page.dart';
+import 'package:cards_navigation/page_view/page_view_main.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       initialRoute: AppRouter.animatedTransition,
       routes: {
         AppRouter.animatedTransition: (BuildContext context) => FirstPage(),
-        AppRouter.pageView: (BuildContext context) => SecondPage(),
+        AppRouter.pageView: (BuildContext context) => MyHomePage(),
       },
     );
   }

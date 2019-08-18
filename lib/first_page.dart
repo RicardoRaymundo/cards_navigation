@@ -67,10 +67,16 @@ class _FirstPageState extends State<FirstPage> {
             ListTile(
               title: Text("Animated Transition Example"),
               trailing: Icon(Icons.arrow_forward),
+              onTap: () {
+                Navigator.pushNamed(context, AppRouter.animatedTransition);
+              },
             ),
             ListTile(
               title: Text("Page View Example"),
               trailing: Icon(Icons.arrow_forward),
+              onTap: () {
+                Navigator.pushNamed(context, AppRouter.pageView);
+              },
             ),
           ],
         ),
