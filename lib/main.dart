@@ -25,10 +25,10 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: const Text(_title)),
       ),
-      initialRoute: AppRouter.firstPage,
+      initialRoute: AppRouter.animatedTransition,
       routes: {
-        AppRouter.firstPage: (BuildContext context) => FirstPage(),
-        AppRouter.secondPage: (BuildContext context) => SecondPage(),
+        AppRouter.animatedTransition: (BuildContext context) => FirstPage(),
+        AppRouter.pageView: (BuildContext context) => SecondPage(),
       },
     );
   }

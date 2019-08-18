@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'custom_transition_animations.dart';
 class CustomNavigator{
 
-  static push(BuildContext context, newRoute) {
+  static push(BuildContext context, newRoute, Function selectedAnimation) {
     final pageRoute = PageRouteBuilder(
       pageBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation) {
         return newRoute;
       },
       transitionDuration: Duration(seconds: 2),
       transitionsBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation, Widget child) {
-        return CustomTransitionAnimations.scaleTransition(animation, secondaryAnimation, child);
+        return selectedAnimation(animation, secondaryAnimation, child);
       },
     );
 

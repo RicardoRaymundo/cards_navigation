@@ -5,6 +5,12 @@ class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print('PAGINA DOIS');
-    return Scaffold(body: CardPage());
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('Navigation'),
+        ),
+        drawer: Drawer(),
+        body: CardPage()
+    );
   }
 }

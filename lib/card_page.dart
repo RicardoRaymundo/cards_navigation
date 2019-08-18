@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
+
 /// This is the stateless widget that the main application instantiates.
 class CardPage extends StatelessWidget {
-  CardPage({Key key}) : super(key: key);
+  CardPage({Key key, Colors colors, }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
