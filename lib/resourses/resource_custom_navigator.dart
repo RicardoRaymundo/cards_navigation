@@ -7,7 +7,7 @@ class CustomNavigator{
       pageBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation) {
         return newRoute;
       },
-      transitionDuration: Duration(seconds: 2),
+      transitionDuration: Duration(seconds: 1),
       transitionsBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation, Widget child) {
         return selectedAnimation(animation, secondaryAnimation, child);
       },

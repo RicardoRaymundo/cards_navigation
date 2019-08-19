@@ -16,10 +16,6 @@ class ThirdPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Third Page'),
-        ),
-        drawer: Drawer(),
         body: ListView(
           scrollDirection: Axis.vertical,
           children: <Widget>[

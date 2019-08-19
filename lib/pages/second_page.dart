@@ -10,15 +10,11 @@ class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Second Page'),
-      ),
-      drawer: Drawer(),
       body: Stack(
         children: <Widget>[
           TallCard(colors: Colors.orangeAccent,),
           Align(
-            heightFactor: 10.7,
+            heightFactor: 11.5,
             widthFactor: 3.2,
             alignment: Alignment.bottomRight,
             child: Container(

@@ -57,9 +57,6 @@ class _FirstPageState extends State<FirstPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('First Page'),
-      ),
       drawer: Drawer(
         child: ListView(
           children: <Widget>[
@@ -84,7 +81,7 @@ class _FirstPageState extends State<FirstPage> {
         children: <Widget>[
           MediumCard(colors: Colors.indigoAccent,),
           Align(
-            heightFactor: 9,
+            heightFactor: 9.7,
             alignment: Alignment.bottomCenter,
             child: Container(
               height: 50,
@@ -106,7 +103,7 @@ class _FirstPageState extends State<FirstPage> {
             ),
           ),
           Align(
-            heightFactor: 2,
+            heightFactor: 3,
             child: _normalDown(),
           ),
         ],
