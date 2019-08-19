@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 
 /// This is the stateless widget that the main application instantiates.
-class CardPage extends StatelessWidget {
-  CardPage({Key key, Colors colors, }) : super(key: key);
+class TallCard extends StatelessWidget {
+  Color colors;
+  TallCard({Key key, Color this.colors, }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class CardPage extends StatelessWidget {
             width: 2.0,
           ),
         ),
-        color: Colors.amber,
+        color: this.colors,
         child: InkWell(
           splashColor: Colors.blue.withAlpha(30),
           onTap: () {
@@ -28,7 +29,7 @@ class CardPage extends StatelessWidget {
           },
           child: Container(
             width: deviceSize.width * 0.9,
-            height: deviceSize.height * 0.7,
+            height: deviceSize.height * 0.9,
             child: Align(
               alignment: Alignment.topCenter,
               child: Padding(

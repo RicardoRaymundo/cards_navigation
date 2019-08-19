@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'card_page.dart';
+import 'package:cards_navigation/cards/medium_card.dart';
 import 'package:cards_navigation/app/app_router.dart';
 import 'package:cards_navigation/resourses/resource_custom_navigator.dart';
-import 'package:cards_navigation/second_page.dart';
+import 'package:cards_navigation/pages/second_page.dart';
 import 'package:cards_navigation/resourses/custom_transition_animations.dart';
 
 class FirstPage extends StatefulWidget {
@@ -83,7 +83,7 @@ class _FirstPageState extends State<FirstPage> {
       ),
       body: Stack(
         children: <Widget>[
-          CardPage(),
+          MediumCard(colors: Colors.indigoAccent,),
           Align(
             heightFactor: 9,
             alignment: Alignment.bottomCenter,
@@ -107,7 +107,7 @@ class _FirstPageState extends State<FirstPage> {
             ),
           ),
           Align(
-            heightFactor: 1,
+            heightFactor: 2,
             child: _normalDown(),
           ),
         ],
