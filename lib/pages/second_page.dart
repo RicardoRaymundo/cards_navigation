@@ -9,10 +9,9 @@ import 'package:cards_navigation/cards/tall_card.dart';
 class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    print('PAGINA DOIS');
     return Scaffold(
       appBar: AppBar(
-        title: Text('Navigation'),
+        title: Text('Second Page'),
       ),
       drawer: Drawer(),
       body: Stack(

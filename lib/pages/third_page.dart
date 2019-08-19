@@ -7,15 +7,17 @@ import 'detail_page.dart';
 class ThirdPage extends StatelessWidget {
 
   List<Widget> cards = [
-
+    SmallCard(colors: Colors.teal,),
+    SmallCard(colors: Colors.amber,),
+    SmallCard(colors: Colors.deepOrangeAccent,),
+    SmallCard(colors: Colors.green,),
   ];
 
   @override
   Widget build(BuildContext context) {
-    print('PAGINA DOIS');
     return Scaffold(
         appBar: AppBar(
-          title: Text('Navigation'),
+          title: Text('Third Page'),
         ),
         drawer: Drawer(),
         body: ListView(
@@ -23,28 +25,47 @@ class ThirdPage extends StatelessWidget {
           children: <Widget>[
             GestureDetector(
               child: Hero(
-                tag: 'imageHero',
-                child: Image.network(
-                  'https://picsum.photos/250?image=9',
-                ),
+                tag: 'CARD 1',
+                child: cards[0]
               ),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (_) {
-                  return DetailPage();
+                  return DetailPage(widget: cards[0],);
                 }));
               },
             ),
-            Hero(
-              tag: 'CARD 2',
-              child: SmallCard(colors: Colors.amber,),
+            GestureDetector(
+              child: Hero(
+                  tag: 'CARD 2',
+                  child: cards[1]
+              ),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (_) {
+                  return DetailPage(widget: cards[1],);
+                }));
+              },
             ),
-            Hero(
-              tag: 'CARD 3',
-              child: SmallCard(colors: Colors.deepOrangeAccent,),
+            GestureDetector(
+              child: Hero(
+                  tag: 'CARD 3',
+                  child: cards[2]
+              ),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (_) {
+                  return DetailPage(widget: cards[2],);
+                }));
+              },
             ),
-            Hero(
-              tag: 'CARD 4',
-              child: SmallCard(colors: Colors.green,),
+            GestureDetector(
+              child: Hero(
+                  tag: 'CARD 4',
+                  child: cards[3]
+              ),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (_) {
+                  return DetailPage(widget: cards[3],);
+                }));
+              },
             ),
           ],
         ));

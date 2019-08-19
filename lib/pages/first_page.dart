@@ -56,10 +56,9 @@ class _FirstPageState extends State<FirstPage> {
 
   @override
   Widget build(BuildContext context) {
-    print('PAGINA UM');
     return Scaffold(
       appBar: AppBar(
-        title: Text('Navigation'),
+        title: Text('First Page'),
       ),
       drawer: Drawer(
         child: ListView(

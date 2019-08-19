@@ -22,12 +22,7 @@ class SmallCard extends StatelessWidget {
           ),
         ),
         color: this.colors,
-        child: InkWell(
-          splashColor: Colors.blue.withAlpha(30),
-          onTap: () {
-            print('Card tapped.');
-          },
-          child: Container(
+        child: Container(
             width: deviceSize.width * 0.9,
             height: deviceSize.height * 0.4,
             child: Align(
@@ -44,7 +39,7 @@ class SmallCard extends StatelessWidget {
                       height: 10,
                     ),
                     Text(
-                      'A card that can be tapped',
+                      'A card Hero!',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 30,
@@ -56,7 +51,7 @@ class SmallCard extends StatelessWidget {
               ),
             ),
           ),
-        ),
+
       ),
 
     );

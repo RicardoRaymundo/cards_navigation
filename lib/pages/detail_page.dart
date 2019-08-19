@@ -3,6 +3,9 @@ import 'package:cards_navigation/cards/small_card.dart';
 
 class DetailPage extends StatelessWidget {
 
+  Widget widget;
+  DetailPage({this.widget});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,7 +13,7 @@ class DetailPage extends StatelessWidget {
         child: Center(
           child: Hero(
             tag: 'imageHero',
-            child: SmallCard(colors: Colors.amber,)
+            child: this.widget
           ),
         ),
         onTap: () {
