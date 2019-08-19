@@ -13,7 +13,11 @@ class DetailPage extends StatelessWidget {
         child: Center(
           child: Hero(
             tag: 'imageHero',
-            child: this.widget
+            child: Stack(
+              children: <Widget>[
+                this.widget,
+              ],
+            )
           ),
         ),
         onTap: () {

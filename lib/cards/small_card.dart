@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 /// This is the stateless widget that the main application instantiates.
 class SmallCard extends StatelessWidget {
   Color colors;
-  SmallCard({Key key, Color this.colors, }) : super(key: key);
+  Widget child;
+  SmallCard({Key key, Color this.colors, Widget this.child }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +47,10 @@ class SmallCard extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
+                    SizedBox(
+                      height: 140,
+                      child: this.child,
+                    )
                   ],
                 ),
               ),

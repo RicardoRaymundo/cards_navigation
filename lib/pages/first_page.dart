@@ -45,7 +45,14 @@ class _FirstPageState extends State<FirstPage> {
               "Slide Right",
             ),
           ),
+          DropdownMenuItem(
+            value: CustomTransitionAnimations.rotationTransition,
+            child: Text(
+              "Rotation",
+            ),
+          ),
         ],
+
         onChanged: (value) {
           setState(() {
             selectedAnimation = value;
@@ -79,7 +86,9 @@ class _FirstPageState extends State<FirstPage> {
       ),
       body: Stack(
         children: <Widget>[
-          MediumCard(colors: Colors.indigoAccent,),
+          MediumCard(
+            colors: Colors.indigoAccent,
+          ),
           Align(
             heightFactor: 9.7,
             alignment: Alignment.bottomCenter,
@@ -92,7 +101,10 @@ class _FirstPageState extends State<FirstPage> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 onPressed: () {
-                  CustomNavigator.push(context, SecondPage(), selectedAnimation);
+                  CustomNavigator.push(
+                      context,
+                      SecondPage(selectedAnimation: this.selectedAnimation),
+                      selectedAnimation);
                   // Navigator.pushNamed(context, AppRouter.secondPage);
                 },
                 child: Align(

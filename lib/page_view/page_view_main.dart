@@ -15,9 +15,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Page View'),
-      ),
       body: PageView(
         //PageView podem outros PageView como filho, como feito abaixo
         //Mudando o scrollDirection, posso acessar meus PageView verticalmente
